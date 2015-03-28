@@ -7,10 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F8B254D1AC720110045F43A /* SYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B254C1AC720110045F43A /* SYTransition.m */; };
+		0F8B254E1AC720110045F43A /* SYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B254C1AC720110045F43A /* SYTransition.m */; };
+		0F8B25511AC724090045F43A /* SYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25501AC724090045F43A /* SYNetworkManager.m */; };
+		0F8B25521AC724090045F43A /* SYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25501AC724090045F43A /* SYNetworkManager.m */; };
+		0F8B25551AC733E70045F43A /* SYRecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25541AC733E70045F43A /* SYRecipesViewController.m */; };
+		0F8B25561AC733E70045F43A /* SYRecipesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25541AC733E70045F43A /* SYRecipesViewController.m */; };
+		0F8B25631AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B255E1AC7363D0045F43A /* RPSlidingMenuCell.m */; };
+		0F8B25641AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B255E1AC7363D0045F43A /* RPSlidingMenuCell.m */; };
+		0F8B25651AC7363D0045F43A /* RPSlidingMenuLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25601AC7363D0045F43A /* RPSlidingMenuLayout.m */; };
+		0F8B25661AC7363D0045F43A /* RPSlidingMenuLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25601AC7363D0045F43A /* RPSlidingMenuLayout.m */; };
+		0F8B25671AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25621AC7363D0045F43A /* RPSlidingMenuViewController.m */; };
+		0F8B25681AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25621AC7363D0045F43A /* RPSlidingMenuViewController.m */; };
+		0F8B256B1AC73B170045F43A /* SYRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B256A1AC73B170045F43A /* SYRecipeDetailViewController.m */; };
+		0F8B256C1AC73B170045F43A /* SYRecipeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B256A1AC73B170045F43A /* SYRecipeDetailViewController.m */; };
+		0F8B25701AC7456A0045F43A /* SYRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B256F1AC7456A0045F43A /* SYRecipe.m */; };
+		0F8B25711AC7456A0045F43A /* SYRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B256F1AC7456A0045F43A /* SYRecipe.m */; };
+		0F8B25741AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25731AC75BD10045F43A /* SYAddRecipeViewController.m */; };
+		0F8B25751AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25731AC75BD10045F43A /* SYAddRecipeViewController.m */; };
+		0F8B25791AC75CE70045F43A /* SYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25781AC75CE70045F43A /* SYTextField.m */; };
+		0F8B257A1AC75CE70045F43A /* SYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25781AC75CE70045F43A /* SYTextField.m */; };
+		0F8B257E1AC75F360045F43A /* NSString+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */; };
+		0F8B257F1AC75F360045F43A /* NSString+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */; };
+		0FAC7D221AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */; };
+		0FAC7D231AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */; };
+		0FAC7D261AC6CC2300DC18B3 /* SYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D251AC6CC2300DC18B3 /* SYNavigationController.m */; };
+		0FAC7D271AC6CC2300DC18B3 /* SYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D251AC6CC2300DC18B3 /* SYNavigationController.m */; };
+		0FAC7D2B1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D2A1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m */; };
+		0FAC7D2C1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D2A1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m */; };
 		0FAC9F3E1AC6C9D700DB6C7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC9F3D1AC6C9D700DB6C7B /* main.m */; };
 		0FAC9F411AC6C9D700DB6C7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC9F401AC6C9D700DB6C7B /* AppDelegate.m */; };
-		0FAC9F441AC6C9D700DB6C7B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC9F431AC6C9D700DB6C7B /* MasterViewController.m */; };
-		0FAC9F471AC6C9D700DB6C7B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC9F461AC6C9D700DB6C7B /* DetailViewController.m */; };
 		0FAC9F4A1AC6C9D700DB6C7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FAC9F481AC6C9D700DB6C7B /* Main.storyboard */; };
 		0FAC9F4C1AC6C9D700DB6C7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAC9F4B1AC6C9D700DB6C7B /* Images.xcassets */; };
 		0FAC9F4F1AC6C9D700DB6C7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAC9F4D1AC6C9D700DB6C7B /* LaunchScreen.xib */; };
@@ -29,15 +55,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F8B254B1AC720110045F43A /* SYTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTransition.h; sourceTree = "<group>"; };
+		0F8B254C1AC720110045F43A /* SYTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTransition.m; sourceTree = "<group>"; };
+		0F8B254F1AC724090045F43A /* SYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkManager.h; sourceTree = "<group>"; };
+		0F8B25501AC724090045F43A /* SYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkManager.m; sourceTree = "<group>"; };
+		0F8B25531AC733E70045F43A /* SYRecipesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRecipesViewController.h; sourceTree = "<group>"; };
+		0F8B25541AC733E70045F43A /* SYRecipesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRecipesViewController.m; sourceTree = "<group>"; };
+		0F8B255C1AC7363D0045F43A /* RPSlidingMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSlidingMenu.h; sourceTree = "<group>"; };
+		0F8B255D1AC7363D0045F43A /* RPSlidingMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSlidingMenuCell.h; sourceTree = "<group>"; };
+		0F8B255E1AC7363D0045F43A /* RPSlidingMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSlidingMenuCell.m; sourceTree = "<group>"; };
+		0F8B255F1AC7363D0045F43A /* RPSlidingMenuLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSlidingMenuLayout.h; sourceTree = "<group>"; };
+		0F8B25601AC7363D0045F43A /* RPSlidingMenuLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSlidingMenuLayout.m; sourceTree = "<group>"; };
+		0F8B25611AC7363D0045F43A /* RPSlidingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSlidingMenuViewController.h; sourceTree = "<group>"; };
+		0F8B25621AC7363D0045F43A /* RPSlidingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSlidingMenuViewController.m; sourceTree = "<group>"; };
+		0F8B25691AC73B170045F43A /* SYRecipeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRecipeDetailViewController.h; sourceTree = "<group>"; };
+		0F8B256A1AC73B170045F43A /* SYRecipeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRecipeDetailViewController.m; sourceTree = "<group>"; };
+		0F8B256E1AC7456A0045F43A /* SYRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRecipe.h; sourceTree = "<group>"; };
+		0F8B256F1AC7456A0045F43A /* SYRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRecipe.m; sourceTree = "<group>"; };
+		0F8B25721AC75BD10045F43A /* SYAddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAddRecipeViewController.h; sourceTree = "<group>"; };
+		0F8B25731AC75BD10045F43A /* SYAddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAddRecipeViewController.m; sourceTree = "<group>"; };
+		0F8B25771AC75CE70045F43A /* SYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextField.h; sourceTree = "<group>"; };
+		0F8B25781AC75CE70045F43A /* SYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextField.m; sourceTree = "<group>"; };
+		0F8B257C1AC75F360045F43A /* NSString+SYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SYCategory.h"; sourceTree = "<group>"; };
+		0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SYCategory.m"; sourceTree = "<group>"; };
+		0FAC7D201AC6CC0800DC18B3 /* SYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBaseViewController.h; sourceTree = "<group>"; };
+		0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBaseViewController.m; sourceTree = "<group>"; };
+		0FAC7D241AC6CC2300DC18B3 /* SYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationController.h; sourceTree = "<group>"; };
+		0FAC7D251AC6CC2300DC18B3 /* SYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNavigationController.m; sourceTree = "<group>"; };
+		0FAC7D291AC6CF5400DC18B3 /* SYNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		0FAC7D2A1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNavigationControllerDelegate.m; sourceTree = "<group>"; };
 		0FAC9F381AC6C9D700DB6C7B /* Syltelabb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syltelabb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAC9F3C1AC6C9D700DB6C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FAC9F3D1AC6C9D700DB6C7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0FAC9F3F1AC6C9D700DB6C7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FAC9F401AC6C9D700DB6C7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0FAC9F421AC6C9D700DB6C7B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		0FAC9F431AC6C9D700DB6C7B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		0FAC9F451AC6C9D700DB6C7B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0FAC9F461AC6C9D700DB6C7B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0FAC9F491AC6C9D700DB6C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FAC9F4B1AC6C9D700DB6C7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0FAC9F4E1AC6C9D700DB6C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -68,6 +119,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8B255A1AC736210045F43A /* 3rd Party Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B255B1AC7363D0045F43A /* RPSlidingMenu */,
+			);
+			name = "3rd Party Libs";
+			sourceTree = "<group>";
+		};
+		0F8B255B1AC7363D0045F43A /* RPSlidingMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B255C1AC7363D0045F43A /* RPSlidingMenu.h */,
+				0F8B255D1AC7363D0045F43A /* RPSlidingMenuCell.h */,
+				0F8B255E1AC7363D0045F43A /* RPSlidingMenuCell.m */,
+				0F8B255F1AC7363D0045F43A /* RPSlidingMenuLayout.h */,
+				0F8B25601AC7363D0045F43A /* RPSlidingMenuLayout.m */,
+				0F8B25611AC7363D0045F43A /* RPSlidingMenuViewController.h */,
+				0F8B25621AC7363D0045F43A /* RPSlidingMenuViewController.m */,
+			);
+			path = RPSlidingMenu;
+			sourceTree = "<group>";
+		};
+		0F8B256D1AC745590045F43A /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B256E1AC7456A0045F43A /* SYRecipe.h */,
+				0F8B256F1AC7456A0045F43A /* SYRecipe.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		0F8B25761AC75CD80045F43A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B25771AC75CE70045F43A /* SYTextField.h */,
+				0F8B25781AC75CE70045F43A /* SYTextField.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0F8B257B1AC75F0B0045F43A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B257C1AC75F360045F43A /* NSString+SYCategory.h */,
+				0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0FAC7D1D1AC6CBA700DC18B3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FAC7D201AC6CC0800DC18B3 /* SYBaseViewController.h */,
+				0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */,
+				0FAC7D241AC6CC2300DC18B3 /* SYNavigationController.h */,
+				0FAC7D251AC6CC2300DC18B3 /* SYNavigationController.m */,
+				0F8B25531AC733E70045F43A /* SYRecipesViewController.h */,
+				0F8B25541AC733E70045F43A /* SYRecipesViewController.m */,
+				0F8B25691AC73B170045F43A /* SYRecipeDetailViewController.h */,
+				0F8B256A1AC73B170045F43A /* SYRecipeDetailViewController.m */,
+				0F8B25721AC75BD10045F43A /* SYAddRecipeViewController.h */,
+				0F8B25731AC75BD10045F43A /* SYAddRecipeViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0FAC7D1E1AC6CBC000DC18B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FAC9F481AC6C9D700DB6C7B /* Main.storyboard */,
+				0FAC9F4B1AC6C9D700DB6C7B /* Images.xcassets */,
+				0FAC9F4D1AC6C9D700DB6C7B /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0FAC7D1F1AC6CBDD00DC18B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F8B254F1AC724090045F43A /* SYNetworkManager.h */,
+				0F8B25501AC724090045F43A /* SYNetworkManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		0FAC7D281AC6CF3C00DC18B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0FAC7D291AC6CF5400DC18B3 /* SYNavigationControllerDelegate.h */,
+				0FAC7D2A1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m */,
+				0F8B254B1AC720110045F43A /* SYTransition.h */,
+				0F8B254C1AC720110045F43A /* SYTransition.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		0FAC9F2F1AC6C9D700DB6C7B = {
 			isa = PBXGroup;
 			children = (
@@ -91,15 +238,16 @@
 		0FAC9F3A1AC6C9D700DB6C7B /* Syltelabb */ = {
 			isa = PBXGroup;
 			children = (
+				0F8B257B1AC75F0B0045F43A /* Categories */,
+				0F8B25761AC75CD80045F43A /* Views */,
+				0F8B256D1AC745590045F43A /* Data Models */,
+				0F8B255A1AC736210045F43A /* 3rd Party Libs */,
+				0FAC7D281AC6CF3C00DC18B3 /* Utilities */,
+				0FAC7D1F1AC6CBDD00DC18B3 /* Network */,
+				0FAC7D1E1AC6CBC000DC18B3 /* Resources */,
+				0FAC7D1D1AC6CBA700DC18B3 /* View Controllers */,
 				0FAC9F3F1AC6C9D700DB6C7B /* AppDelegate.h */,
 				0FAC9F401AC6C9D700DB6C7B /* AppDelegate.m */,
-				0FAC9F421AC6C9D700DB6C7B /* MasterViewController.h */,
-				0FAC9F431AC6C9D700DB6C7B /* MasterViewController.m */,
-				0FAC9F451AC6C9D700DB6C7B /* DetailViewController.h */,
-				0FAC9F461AC6C9D700DB6C7B /* DetailViewController.m */,
-				0FAC9F481AC6C9D700DB6C7B /* Main.storyboard */,
-				0FAC9F4B1AC6C9D700DB6C7B /* Images.xcassets */,
-				0FAC9F4D1AC6C9D700DB6C7B /* LaunchScreen.xib */,
 				0FAC9F3B1AC6C9D700DB6C7B /* Supporting Files */,
 			);
 			path = Syltelabb;
@@ -283,10 +431,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8B25511AC724090045F43A /* SYNetworkManager.m in Sources */,
+				0F8B254D1AC720110045F43A /* SYTransition.m in Sources */,
+				0F8B25701AC7456A0045F43A /* SYRecipe.m in Sources */,
+				0FAC7D221AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */,
+				0F8B25741AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */,
+				0F8B256B1AC73B170045F43A /* SYRecipeDetailViewController.m in Sources */,
+				0F8B25651AC7363D0045F43A /* RPSlidingMenuLayout.m in Sources */,
+				0FAC7D261AC6CC2300DC18B3 /* SYNavigationController.m in Sources */,
+				0F8B25551AC733E70045F43A /* SYRecipesViewController.m in Sources */,
 				0FAC9F411AC6C9D700DB6C7B /* AppDelegate.m in Sources */,
-				0FAC9F441AC6C9D700DB6C7B /* MasterViewController.m in Sources */,
+				0FAC7D2B1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m in Sources */,
+				0F8B25791AC75CE70045F43A /* SYTextField.m in Sources */,
 				0FAC9F3E1AC6C9D700DB6C7B /* main.m in Sources */,
-				0FAC9F471AC6C9D700DB6C7B /* DetailViewController.m in Sources */,
+				0F8B257E1AC75F360045F43A /* NSString+SYCategory.m in Sources */,
+				0F8B25671AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */,
+				0F8B25631AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +454,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8B257F1AC75F360045F43A /* NSString+SYCategory.m in Sources */,
+				0F8B25521AC724090045F43A /* SYNetworkManager.m in Sources */,
+				0FAC7D2C1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m in Sources */,
+				0F8B254E1AC720110045F43A /* SYTransition.m in Sources */,
+				0F8B256C1AC73B170045F43A /* SYRecipeDetailViewController.m in Sources */,
 				0FAC9F5B1AC6C9D700DB6C7B /* SyltelabbTests.m in Sources */,
+				0F8B257A1AC75CE70045F43A /* SYTextField.m in Sources */,
+				0FAC7D271AC6CC2300DC18B3 /* SYNavigationController.m in Sources */,
+				0FAC7D231AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */,
+				0F8B25661AC7363D0045F43A /* RPSlidingMenuLayout.m in Sources */,
+				0F8B25561AC733E70045F43A /* SYRecipesViewController.m in Sources */,
+				0F8B25711AC7456A0045F43A /* SYRecipe.m in Sources */,
+				0F8B25681AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */,
+				0F8B25751AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */,
+				0F8B25641AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +602,7 @@
 		};
 		0FAC9F621AC6C9D700DB6C7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70C848FFB8048C0B63C47EF8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -447,6 +622,7 @@
 		};
 		0FAC9F631AC6C9D700DB6C7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DF38966B2AC7CDD2CDE178 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
