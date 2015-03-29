@@ -29,7 +29,7 @@
     SYNavigationControllerDelegate *delegate = (SYNavigationControllerDelegate *)self.delegate;
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         CGPoint location = [recognizer locationInView:self.view];
-        if (location.x <  CGRectGetMidX(self.view.bounds) && self.viewControllers.count > 1) { // left half
+        if (location.x <  CGRectGetMidX(self.view.bounds) / 2.f && self.viewControllers.count > 1) { // left edge
             delegate.interactionController = [UIPercentDrivenInteractiveTransition new];
             [self popViewControllerAnimated:YES];
         }

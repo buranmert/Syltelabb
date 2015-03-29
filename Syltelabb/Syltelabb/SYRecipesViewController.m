@@ -29,6 +29,16 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
     self.dataSourceArray = [NSArray array];
     self.networkManager = [SYNetworkManager new];
     [self fetchRecipes];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchRecipes) name:kNetworkUpdateNeededNotificationName object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchRecipes) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Network operation methods

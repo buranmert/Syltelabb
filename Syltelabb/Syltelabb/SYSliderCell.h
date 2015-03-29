@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SYSliderCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UIStepper *difficultyStepper;
+@property (weak, nonatomic) IBOutlet UISwitch *favoriteSlider;
+@property (weak, nonatomic) IBOutlet UILabel *favoriteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @end

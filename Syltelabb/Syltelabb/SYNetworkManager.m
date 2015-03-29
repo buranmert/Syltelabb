@@ -10,7 +10,7 @@
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 static NSString * const kBaseURL = @"http://hyper-recipes.herokuapp.com/";
-static NSString * const kRetrieveRelativeURL = @"recipes";
+static NSString * const kRetrieveRelativeURL = @"recipes/";
 
 @interface SYNetworkManager ()
 @property (nonatomic, strong) AFHTTPRequestOperationManager *networkManager;
@@ -37,6 +37,20 @@ static NSString * const kRetrieveRelativeURL = @"recipes";
                             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                 failure(error);
                             }];
+}
+
+- (AFHTTPRequestOperation *)deleteRecipeWithId:(NSNumber *)recipeId success:(void (^)())success
+                                       failure:(void (^)(NSError *error))failure {
+    NSString *url = [NSString stringWithFormat:@"%@%@", [SYNetworkManager getURLWithRelativePath:kRetrieveRelativeURL], [recipeId stringValue]];
+    return [self.networkManager DELETE:url
+                            parameters:nil
+                               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                   [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkUpdateNeededNotificationName object:nil];
+                                   success();
+                               }
+                               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                   failure(error);
+                               }];
 }
 
 + (NSString *)getURLWithRelativePath:(NSString *)relativePath {

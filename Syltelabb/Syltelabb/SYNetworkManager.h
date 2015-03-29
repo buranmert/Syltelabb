@@ -10,9 +10,14 @@
 
 @class AFHTTPRequestOperation;
 
+static NSString * const kNetworkUpdateNeededNotificationName = @"networkUpdateNeededNotification";
+
 @interface SYNetworkManager : NSObject
 
 - (AFHTTPRequestOperation *)getRecipesWithSuccess:(void (^)(NSArray *recipesArray))success
                                           failure:(void (^)(NSError *error))failure;
+
+- (AFHTTPRequestOperation *)deleteRecipeWithId:(NSNumber *)recipeId success:(void (^)())success
+                                       failure:(void (^)(NSError *error))failure;
 
 @end

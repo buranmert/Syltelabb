@@ -16,17 +16,17 @@ static const CGFloat kTextFieldFontSize = 14.f;
     [super awakeFromNib];
     //all textfields in the app should look similar
     self.tintColor = [UIColor redColor];
-    self.textColor = [UIColor blackColor];
+    self.textColor = [UIColor whiteColor];
     self.font = [UIFont systemFontOfSize:kTextFieldFontSize];
     self.borderStyle = UITextBorderStyleNone;
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.25];
     self.textAlignment = NSTextAlignmentRight;
 }
 
 - (void)setLeftLabelText:(NSString *)leftLabelString {
     if (self.leftView == nil) {
         UILabel *leftLabel = [UILabel new];
-        [leftLabel setFont:self.font];
+        [leftLabel setFont:[UIFont boldSystemFontOfSize:kTextFieldFontSize]];
         [leftLabel setTextColor:self.textColor];
         [leftLabel setText:leftLabelString];
         [leftLabel sizeToFit];
