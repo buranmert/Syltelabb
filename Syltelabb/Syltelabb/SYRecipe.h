@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static const NSUInteger kObligatoryFieldCount = 2;
+
 @interface SYRecipe : NSObject
 @property (nonatomic, strong) NSNumber *recipe_id;
 @property (nonatomic, strong) NSString *name;
@@ -19,6 +21,7 @@
 @property (nonatomic, strong) NSString *updated_at;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *thumbnail_url;
+@property (nonatomic) NSUInteger nonNilFieldCount;
 
 + (instancetype)recipeWithDictionary:(NSDictionary *)dictionary;
 @end

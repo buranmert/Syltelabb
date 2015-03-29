@@ -31,6 +31,10 @@
 		0F8B257F1AC75F360045F43A /* NSString+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */; };
 		0F8B25821AC78EA20045F43A /* UIView+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25811AC78EA20045F43A /* UIView+SYCategory.m */; };
 		0F8B25831AC78EA20045F43A /* UIView+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8B25811AC78EA20045F43A /* UIView+SYCategory.m */; };
+		0F9292C31AC84F450034AD9E /* SYTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9292C21AC84F450034AD9E /* SYTextFieldCell.m */; };
+		0F9292C41AC84F450034AD9E /* SYTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9292C21AC84F450034AD9E /* SYTextFieldCell.m */; };
+		0F9292C71AC84F510034AD9E /* SYSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9292C61AC84F510034AD9E /* SYSliderCell.m */; };
+		0F9292C81AC84F510034AD9E /* SYSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9292C61AC84F510034AD9E /* SYSliderCell.m */; };
 		0FAC7D221AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */; };
 		0FAC7D231AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */; };
 		0FAC7D261AC6CC2300DC18B3 /* SYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC7D251AC6CC2300DC18B3 /* SYNavigationController.m */; };
@@ -82,6 +86,10 @@
 		0F8B257D1AC75F360045F43A /* NSString+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SYCategory.m"; sourceTree = "<group>"; };
 		0F8B25801AC78EA20045F43A /* UIView+SYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYCategory.h"; sourceTree = "<group>"; };
 		0F8B25811AC78EA20045F43A /* UIView+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYCategory.m"; sourceTree = "<group>"; };
+		0F9292C11AC84F450034AD9E /* SYTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextFieldCell.h; sourceTree = "<group>"; };
+		0F9292C21AC84F450034AD9E /* SYTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextFieldCell.m; sourceTree = "<group>"; };
+		0F9292C51AC84F510034AD9E /* SYSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSliderCell.h; sourceTree = "<group>"; };
+		0F9292C61AC84F510034AD9E /* SYSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSliderCell.m; sourceTree = "<group>"; };
 		0FAC7D201AC6CC0800DC18B3 /* SYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBaseViewController.h; sourceTree = "<group>"; };
 		0FAC7D211AC6CC0800DC18B3 /* SYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBaseViewController.m; sourceTree = "<group>"; };
 		0FAC7D241AC6CC2300DC18B3 /* SYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationController.h; sourceTree = "<group>"; };
@@ -159,6 +167,10 @@
 			children = (
 				0F8B25771AC75CE70045F43A /* SYTextField.h */,
 				0F8B25781AC75CE70045F43A /* SYTextField.m */,
+				0F9292C11AC84F450034AD9E /* SYTextFieldCell.h */,
+				0F9292C21AC84F450034AD9E /* SYTextFieldCell.m */,
+				0F9292C51AC84F510034AD9E /* SYSliderCell.h */,
+				0F9292C61AC84F510034AD9E /* SYSliderCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -438,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F8B25511AC724090045F43A /* SYNetworkManager.m in Sources */,
+				0F9292C31AC84F450034AD9E /* SYTextFieldCell.m in Sources */,
 				0F8B254D1AC720110045F43A /* SYTransition.m in Sources */,
 				0F8B25701AC7456A0045F43A /* SYRecipe.m in Sources */,
 				0FAC7D221AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */,
@@ -449,6 +462,7 @@
 				0F8B25551AC733E70045F43A /* SYRecipesViewController.m in Sources */,
 				0FAC9F411AC6C9D700DB6C7B /* AppDelegate.m in Sources */,
 				0FAC7D2B1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m in Sources */,
+				0F9292C71AC84F510034AD9E /* SYSliderCell.m in Sources */,
 				0F8B25791AC75CE70045F43A /* SYTextField.m in Sources */,
 				0FAC9F3E1AC6C9D700DB6C7B /* main.m in Sources */,
 				0F8B257E1AC75F360045F43A /* NSString+SYCategory.m in Sources */,
@@ -467,6 +481,7 @@
 				0F8B254E1AC720110045F43A /* SYTransition.m in Sources */,
 				0F8B256C1AC73B170045F43A /* SYRecipeDetailViewController.m in Sources */,
 				0FAC9F5B1AC6C9D700DB6C7B /* SyltelabbTests.m in Sources */,
+				0F9292C81AC84F510034AD9E /* SYSliderCell.m in Sources */,
 				0F8B257A1AC75CE70045F43A /* SYTextField.m in Sources */,
 				0FAC7D271AC6CC2300DC18B3 /* SYNavigationController.m in Sources */,
 				0FAC7D231AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */,
@@ -474,6 +489,7 @@
 				0F8B25561AC733E70045F43A /* SYRecipesViewController.m in Sources */,
 				0F8B25711AC7456A0045F43A /* SYRecipe.m in Sources */,
 				0F8B25831AC78EA20045F43A /* UIView+SYCategory.m in Sources */,
+				0F9292C41AC84F450034AD9E /* SYTextFieldCell.m in Sources */,
 				0F8B25681AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */,
 				0F8B25751AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */,
 				0F8B25641AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */,

@@ -36,6 +36,7 @@ static const NSTimeInterval kTransitionDuration = 0.5;
             toViewController.view.alpha = 1;
         } completion:^(BOOL finished) {
             fromViewController.view.transform = CGAffineTransformIdentity;
+            toViewController.view.transform = CGAffineTransformIdentity;
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
     }

@@ -18,4 +18,10 @@
     [self addConstraints:@[constraintX, constraintY]];
 }
 
+- (void)setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    [self setFrame:frame];
+}
+
 @end

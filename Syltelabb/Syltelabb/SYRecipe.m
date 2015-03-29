@@ -33,11 +33,11 @@
                 }
             }
             else {
+                recipe.nonNilFieldCount++;
                 [recipe setValue:value forKey:safeKey];
             }
         }
     }
-    
     return recipe;
 }
 

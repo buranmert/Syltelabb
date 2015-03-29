@@ -11,5 +11,6 @@
 @interface UIView (SYCategory)
 
 - (void)addCenteredSubview:(UIView *)subview;
+- (void)setHeight:(CGFloat)height;
 
 @end

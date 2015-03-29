@@ -10,11 +10,6 @@
 
 @class SYRecipe;
 
-@interface SYRecipeDetailViewController : SYBaseViewController
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
+@interface SYRecipeDetailViewController : SYBaseViewController <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) SYRecipe *recipe;
 @end

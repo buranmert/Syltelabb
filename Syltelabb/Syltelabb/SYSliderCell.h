@@ -1,5 +1,5 @@
 //
-//  SYTextField.h
+//  SYSliderCell.h
 //  Syltelabb
 //
 //  Created by Mert Buran on 29/03/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYTextField : UITextField
-- (void)setLeftLabelText:(NSString *)leftLabelString;
+@interface SYSliderCell : UITableViewCell
+
 @end
