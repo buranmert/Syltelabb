@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SYBaseViewController : UIViewController
-
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 @end

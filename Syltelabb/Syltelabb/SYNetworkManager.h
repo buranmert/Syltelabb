@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class AFHTTPRequestOperation;
+
 @interface SYNetworkManager : NSObject
 
-- (void)getRecipesWithSuccess:(void (^)(NSArray *recipesArray))success
-                      failure:(void (^)(NSError *error))failure;
+- (AFHTTPRequestOperation *)getRecipesWithSuccess:(void (^)(NSArray *recipesArray))success
+                                          failure:(void (^)(NSError *error))failure;
 
 @end

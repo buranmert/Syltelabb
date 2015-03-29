@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SYTransition : UIPercentDrivenInteractiveTransition <UIViewControllerAnimatedTransitioning>
-
+@property (nonatomic) UINavigationControllerOperation operationType;
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UINavigationController.h>
+#import <UIKit/UIViewControllerTransitioning.h>
 
 @interface SYNavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
-
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactionController;
 @end

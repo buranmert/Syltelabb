@@ -8,6 +8,13 @@
 
 #import "SYBaseViewController.h"
 
-@interface SYRecipeDetailViewController : SYBaseViewController
+@class SYRecipe;
 
+@interface SYRecipeDetailViewController : SYBaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (nonatomic, strong) SYRecipe *recipe;
 @end

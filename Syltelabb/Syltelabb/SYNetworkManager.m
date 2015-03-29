@@ -27,16 +27,16 @@ static NSString * const kRetrieveRelativeURL = @"recipes";
     return self;
 }
 
-- (void)getRecipesWithSuccess:(void (^)(NSArray *recipesArray))success
-                      failure:(void (^)(NSError *error))failure {
-    [self.networkManager GET:[SYNetworkManager getURLWithRelativePath:kRetrieveRelativeURL]
-                  parameters:nil
-                     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                         NSArray *responseArray = responseObject;
-                         success(responseArray);
-                     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                         failure(error);
-                     }];
+- (AFHTTPRequestOperation *)getRecipesWithSuccess:(void (^)(NSArray *recipesArray))success
+                                          failure:(void (^)(NSError *error))failure {
+    return [self.networkManager GET:[SYNetworkManager getURLWithRelativePath:kRetrieveRelativeURL]
+                         parameters:nil
+                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                NSArray *responseArray = responseObject;
+                                success(responseArray);
+                            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                failure(error);
+                            }];
 }
 
 + (NSString *)getURLWithRelativePath:(NSString *)relativePath {

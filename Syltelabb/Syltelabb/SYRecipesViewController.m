@@ -12,6 +12,8 @@
 #import "SYRecipe.h"
 #import "NSString+SYCategory.h"
 #import <UIImageView+AFNetworking.h>
+#import <UIActivityIndicatorView+AFNetworking.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
 static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewController";
 
@@ -26,9 +28,14 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
     [super viewDidLoad];
     self.dataSourceArray = [NSArray array];
     self.networkManager = [SYNetworkManager new];
-    
+    [self fetchRecipes];
+}
+
+#pragma mark - Network operation methods
+
+- (void)fetchRecipes {
     __weak typeof(self) weakSelf = self;
-    [self.networkManager getRecipesWithSuccess:^(NSArray *recipesArray) {
+    AFHTTPRequestOperation *operation = [self.networkManager getRecipesWithSuccess:^(NSArray *recipesArray) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         NSMutableArray *newRecipesArray = [NSMutableArray array];
         for (NSDictionary *recipeDictionary in recipesArray) {
@@ -40,11 +47,14 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
             [strongSelf reloadCollectionView];
         });
     }
-                                       failure:^(NSError *error) {
-                                           
-                                       }];
-    // Do any additional setup after loading the view.
+                                                                           failure:^(NSError *error) {
+                                                                               //may pop an AlertController
+                                                                           }];
+    [self.view bringSubviewToFront:self.activityIndicatorView];
+    [self.activityIndicatorView setAnimatingWithStateOfOperation:operation];
 }
+
+#pragma mark - RPSlidingMenuViewController methods
 
 // return the number of menu items
 - (NSInteger)numberOfItemsInSlidingMenu {
@@ -76,6 +86,8 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
     [super slidingMenu:slidingMenu didSelectItemAtRow:row];
     
     SYRecipeDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:kDetailViewControllerIdentifier];
+    SYRecipe *recipe = [self.dataSourceArray objectAtIndex:row];
+    detailVC.recipe = recipe;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "SYBaseViewController.h"
+#import "UIView+SYCategory.h"
 
 @interface SYBaseViewController ()
 
@@ -17,21 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.activityIndicatorView = [self setupActivityIndicatorView];
+    [self.view addCenteredSubview:self.activityIndicatorView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIActivityIndicatorView *)setupActivityIndicatorView {
+    UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityIndicatorView.color = [UIColor greenColor];
+    activityIndicatorView.hidesWhenStopped = YES;
+    return activityIndicatorView;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

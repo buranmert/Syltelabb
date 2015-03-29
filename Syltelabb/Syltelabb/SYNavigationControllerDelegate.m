@@ -24,12 +24,18 @@
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-    if (operation == UINavigationControllerOperationPop) {
+    if (operation == UINavigationControllerOperationPop || operation == UINavigationControllerOperationPush) {
+        self.customTransition.operationType = operation;
         return self.customTransition;
     }
     else {
         return nil;
     }
+}
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController*)navigationController
+                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController {
+    return self.interactionController;
 }
 
 @end
