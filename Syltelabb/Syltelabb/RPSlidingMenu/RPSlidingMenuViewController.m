@@ -116,8 +116,11 @@ static NSString *RPSlidingCellIdentifier = @"RPSlidingCellIdentifier";
     [self slidingMenu:self didSelectItemAtRow:indexPath.row];
 }
 
-- (void)reloadCollectionView {
+- (void)reloadCollectionViewScrollToTop:(BOOL)scrollToTop {
     [self.collectionView reloadData];
+    if (scrollToTop && [self numberOfItemsInSlidingMenu] > 0) {
+        [self scrollToRow:0 animated:YES];
+    }
 }
 
 @end

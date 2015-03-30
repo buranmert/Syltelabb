@@ -63,7 +63,7 @@
                             <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addButtonTapped:" destination="RVS-AD-t9T" id="Di5-Uj-nGa"/>
-                                <segue destination="cjT-01-y9W" kind="showDetail" id="lX9-Wi-cQ7"/>
+                                <segue destination="cjT-01-y9W" kind="show" id="lX9-Wi-cQ7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="569" y="64"/>
         </scene>
-        <!--Add Recipe View Controller-->
+        <!--Add Recipe-->
         <scene sceneID="Ech-Ko-2bo">
             <objects>
-                <viewController id="cjT-01-y9W" customClass="SYAddRecipeViewController" sceneMemberID="viewController">
+                <viewController title="Add Recipe" id="cjT-01-y9W" customClass="SYAddRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PHs-Bg-bZq"/>
                         <viewControllerLayoutGuide type="bottom" id="11e-ZC-kjq"/>
@@ -87,16 +87,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-7f-t3R" userLabel="Form Scroll View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO BE IMPLEMENTED AFTER GETTING HIRED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh1-Ng-l02">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0Kg-7f-t3R" secondAttribute="trailing" id="5DQ-Qj-xpc"/>
-                            <constraint firstItem="0Kg-7f-t3R" firstAttribute="top" secondItem="3Fv-mW-wyj" secondAttribute="top" id="Lri-2K-c2h"/>
-                            <constraint firstItem="11e-ZC-kjq" firstAttribute="top" secondItem="0Kg-7f-t3R" secondAttribute="bottom" id="MHN-gj-Lgd"/>
-                            <constraint firstItem="0Kg-7f-t3R" firstAttribute="leading" secondItem="3Fv-mW-wyj" secondAttribute="leading" id="Me3-QX-O2e"/>
+                            <constraint firstAttribute="trailing" secondItem="vh1-Ng-l02" secondAttribute="trailing" id="4Xh-HS-SSd"/>
+                            <constraint firstItem="vh1-Ng-l02" firstAttribute="leading" secondItem="3Fv-mW-wyj" secondAttribute="leading" id="JHh-6W-0Ae"/>
+                            <constraint firstItem="11e-ZC-kjq" firstAttribute="top" secondItem="vh1-Ng-l02" secondAttribute="bottom" id="kFf-MH-zBo"/>
+                            <constraint firstItem="vh1-Ng-l02" firstAttribute="top" secondItem="PHs-Bg-bZq" secondAttribute="bottom" id="kdk-O3-RQi"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -128,7 +131,7 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ7-F3-hol">
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="60" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ7-F3-hol">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -142,7 +145,7 @@
                                             <state key="normal" title="Delete Recipe">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <state key="highlighted">
+                                            <state key="highlighted" title="Processing">
                                                 <color key="titleColor" red="0.90196078430000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
@@ -183,7 +186,7 @@
                                             <outlet property="textField" destination="9bn-zR-FlD" id="lAJ-jF-bLt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SliderCell" id="9cG-G5-W4R" customClass="SYSliderCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SliderCell" rowHeight="44" id="9cG-G5-W4R" customClass="SYSliderCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9cG-G5-W4R" id="giu-Dy-cSi">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -201,13 +204,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" value="1" minimumValue="1" maximumValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="lY7-cP-six">
-                                                    <rect key="frame" x="112.5" y="10" width="94" height="29"/>
+                                                    <rect key="frame" x="112" y="10" width="94" height="29"/>
                                                     <connections>
+                                                        <action selector="stepperChanged:" destination="7hg-Sp-nEh" eventType="valueChanged" id="qjB-qm-Kzr"/>
                                                         <action selector="stepperChanged:" destination="9cG-G5-W4R" eventType="valueChanged" id="r8R-oi-rP5"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDO-fh-qdV" userLabel="Difficulty Level Label">
-                                                    <rect key="frame" x="94.5" y="15" width="10" height="20.5"/>
+                                                    <rect key="frame" x="94" y="15" width="10" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -217,7 +221,8 @@
                                                     <color key="onTintColor" red="0.19922115200000001" green="1" blue="0.12841770490000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="thumbTintColor" red="0.90196078430000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
-                                                        <action selector="sliderChanged:" destination="9cG-G5-W4R" eventType="valueChanged" id="nQm-Ji-6ge"/>
+                                                        <action selector="sliderChanged:" destination="7hg-Sp-nEh" eventType="valueChanged" id="Cf3-iu-LUU"/>
+                                                        <action selector="sliderChanged:" destination="9cG-G5-W4R" eventType="valueChanged" id="xZv-vF-FwV"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -230,8 +235,8 @@
                                                 <constraint firstItem="LE9-ap-Dk3" firstAttribute="centerY" secondItem="qQM-Td-sXZ" secondAttribute="centerY" id="QAd-av-nop"/>
                                                 <constraint firstItem="lY7-cP-six" firstAttribute="centerY" secondItem="dDO-fh-qdV" secondAttribute="centerY" constant="-0.75" id="Tvi-du-qTF"/>
                                                 <constraint firstAttribute="trailing" secondItem="qQM-Td-sXZ" secondAttribute="trailing" constant="20" id="gVv-dT-Isi"/>
+                                                <constraint firstAttribute="centerY" secondItem="La6-tf-0hw" secondAttribute="centerY" constant="-3.25" id="iee-Od-XHP"/>
                                                 <constraint firstItem="lY7-cP-six" firstAttribute="leading" secondItem="dDO-fh-qdV" secondAttribute="trailing" constant="8" id="rua-d3-OMi"/>
-                                                <constraint firstItem="La6-tf-0hw" firstAttribute="top" secondItem="giu-Dy-cSi" secondAttribute="top" constant="15" id="tly-Ic-6LI"/>
                                                 <constraint firstItem="qQM-Td-sXZ" firstAttribute="centerY" secondItem="La6-tf-0hw" secondAttribute="centerY" id="uJt-qE-CCU"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -245,20 +250,20 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Ah7-4n-0Wa" id="kYA-Vz-yja"/>
-                                    <outlet property="delegate" destination="Ah7-4n-0Wa" id="YAf-fE-lZw"/>
+                                    <outlet property="dataSource" destination="7hg-Sp-nEh" id="Fcd-Sa-E8t"/>
+                                    <outlet property="delegate" destination="7hg-Sp-nEh" id="KHm-ct-Z4z"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="vdW-EK-yoj" secondAttribute="bottom" id="4MB-Fu-CyH"/>
                             <constraint firstItem="vdW-EK-yoj" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" id="AxB-5I-ilP"/>
                             <constraint firstItem="ZJ7-F3-hol" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" id="CwK-N1-tLd"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="XbE-V1-AGo" secondAttribute="bottom" id="GNl-Av-BLd"/>
                             <constraint firstAttribute="trailing" secondItem="ZJ7-F3-hol" secondAttribute="trailing" id="IE3-fT-xZr"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="ZJ7-F3-hol" secondAttribute="bottom" id="O5y-cl-ofB"/>
                             <constraint firstItem="XbE-V1-AGo" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="Qwl-Gd-bGV"/>
+                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="vdW-EK-yoj" secondAttribute="bottom" id="S5l-Ql-jd6"/>
                             <constraint firstAttribute="trailing" secondItem="XbE-V1-AGo" secondAttribute="trailing" id="Un2-zf-3EE"/>
                             <constraint firstItem="ZJ7-F3-hol" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="top" id="X8E-pn-WwO"/>
                             <constraint firstAttribute="trailing" secondItem="vdW-EK-yoj" secondAttribute="trailing" id="ZR6-Zp-bC7"/>
@@ -271,10 +276,13 @@
                         <outlet property="actionButton" destination="t17-Rg-Tl3" id="PqC-hu-2Gt"/>
                         <outlet property="backgroundBlurView" destination="XbE-V1-AGo" id="miU-o0-rTi"/>
                         <outlet property="imageView" destination="vdW-EK-yoj" id="nb8-DV-eNb"/>
+                        <outlet property="logicController" destination="7hg-Sp-nEh" id="0Ki-qc-gOl"/>
                         <outlet property="tableView" destination="ZJ7-F3-hol" id="1Fh-CZ-CAX"/>
+                        <outlet property="tableViewBottomSpaceConstraint" destination="O5y-cl-ofB" id="Erl-ab-tm5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+                <customObject id="7hg-Sp-nEh" customClass="SYRecipeDetailLogicController"/>
             </objects>
             <point key="canvasLocation" x="1295" y="64"/>
         </scene>

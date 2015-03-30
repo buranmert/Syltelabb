@@ -7,6 +7,7 @@
 //
 
 #import "SYNetworkManager.h"
+#import "SYRecipe.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 static NSString * const kBaseURL = @"http://hyper-recipes.herokuapp.com/";
@@ -51,6 +52,21 @@ static NSString * const kRetrieveRelativeURL = @"recipes/";
                                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                    failure(error);
                                }];
+}
+
+- (AFHTTPRequestOperation *)updateRecipe:(SYRecipe *)recipe success:(void (^)())success
+                                 failure:(void (^)(NSError *error))failure {
+    NSString *url = [NSString stringWithFormat:@"%@%@", [SYNetworkManager getURLWithRelativePath:kRetrieveRelativeURL], [recipe.recipe_id stringValue]];
+    NSDictionary *parameters = [recipe serialize];
+    return [self.networkManager PUT:url
+                         parameters:parameters
+                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkUpdateNeededNotificationName object:nil];
+                                success();
+                            }
+                            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                failure(error);
+                            }];
 }
 
 + (NSString *)getURLWithRelativePath:(NSString *)relativePath {

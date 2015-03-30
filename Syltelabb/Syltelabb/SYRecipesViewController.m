@@ -28,13 +28,8 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
     [super viewDidLoad];
     self.dataSourceArray = [NSArray array];
     self.networkManager = [SYNetworkManager new];
-    [self fetchRecipes];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchRecipes) name:kNetworkUpdateNeededNotificationName object:nil];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchRecipes) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [self fetchRecipes:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchRecipes:) name:kNetworkUpdateNeededNotificationName object:nil];
 }
 
 - (void)dealloc {
@@ -43,7 +38,8 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
 
 #pragma mark - Network operation methods
 
-- (void)fetchRecipes {
+- (void)fetchRecipes:(NSNotification *)notification {
+    BOOL willScrollToTop = notification == nil ? NO : YES;
     __weak typeof(self) weakSelf = self;
     AFHTTPRequestOperation *operation = [self.networkManager getRecipesWithSuccess:^(NSArray *recipesArray) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -52,9 +48,11 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
             SYRecipe *recipe = [SYRecipe recipeWithDictionary:recipeDictionary];
             [newRecipesArray addObject:recipe];
         }
-        strongSelf.dataSourceArray = [NSArray arrayWithArray:newRecipesArray];
+        strongSelf.dataSourceArray = [newRecipesArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[(SYRecipe *)obj1 recipe_id] integerValue] > [[(SYRecipe *)obj2 recipe_id] integerValue] ;
+        }];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [strongSelf reloadCollectionView];
+            [strongSelf reloadCollectionViewScrollToTop:willScrollToTop];
         });
     }
                                                                            failure:^(NSError *error) {
@@ -95,9 +93,9 @@ static NSString * const kDetailViewControllerIdentifier = @"RecipeDetailViewCont
 - (void)slidingMenu:(RPSlidingMenuViewController *)slidingMenu didSelectItemAtRow:(NSInteger)row {
     [super slidingMenu:slidingMenu didSelectItemAtRow:row];
     
-    SYRecipeDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:kDetailViewControllerIdentifier];
     SYRecipe *recipe = [self.dataSourceArray objectAtIndex:row];
-    detailVC.recipe = recipe;
+    SYRecipeDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier:kDetailViewControllerIdentifier];
+    [detailVC setRecipe:recipe];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

@@ -10,6 +10,6 @@
 
 @class SYRecipe;
 
-@interface SYRecipeDetailViewController : SYBaseViewController <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) SYRecipe *recipe;
+@interface SYRecipeDetailViewController : SYBaseViewController
+- (void)setRecipe:(SYRecipe *)recipe;
 @end

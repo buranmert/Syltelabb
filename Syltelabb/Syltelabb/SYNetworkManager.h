@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class AFHTTPRequestOperation;
+@class SYRecipe;
 
 static NSString * const kNetworkUpdateNeededNotificationName = @"networkUpdateNeededNotification";
 
@@ -18,6 +19,9 @@ static NSString * const kNetworkUpdateNeededNotificationName = @"networkUpdateNe
                                           failure:(void (^)(NSError *error))failure;
 
 - (AFHTTPRequestOperation *)deleteRecipeWithId:(NSNumber *)recipeId success:(void (^)())success
+                                       failure:(void (^)(NSError *error))failure;
+
+- (AFHTTPRequestOperation *)updateRecipe:(SYRecipe *)recipe success:(void (^)())success
                                        failure:(void (^)(NSError *error))failure;
 
 @end

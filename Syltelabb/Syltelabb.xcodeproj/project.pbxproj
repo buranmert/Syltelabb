@@ -47,6 +47,8 @@
 		0FAC9F4C1AC6C9D700DB6C7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FAC9F4B1AC6C9D700DB6C7B /* Images.xcassets */; };
 		0FAC9F4F1AC6C9D700DB6C7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAC9F4D1AC6C9D700DB6C7B /* LaunchScreen.xib */; };
 		0FAC9F5B1AC6C9D700DB6C7B /* SyltelabbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC9F5A1AC6C9D700DB6C7B /* SyltelabbTests.m */; };
+		0FCE4BF81AC93609005D6E32 /* SYRecipeDetailLogicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4BF71AC93609005D6E32 /* SYRecipeDetailLogicController.m */; };
+		0FCE4BF91AC93609005D6E32 /* SYRecipeDetailLogicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCE4BF71AC93609005D6E32 /* SYRecipeDetailLogicController.m */; };
 		E9B7032D372EFDF34D760543 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3AC8DEC6374931F6E96970 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		0FAC9F541AC6C9D700DB6C7B /* SyltelabbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyltelabbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FAC9F591AC6C9D700DB6C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FAC9F5A1AC6C9D700DB6C7B /* SyltelabbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyltelabbTests.m; sourceTree = "<group>"; };
+		0FCE4BF61AC93609005D6E32 /* SYRecipeDetailLogicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYRecipeDetailLogicController.h; sourceTree = "<group>"; };
+		0FCE4BF71AC93609005D6E32 /* SYRecipeDetailLogicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYRecipeDetailLogicController.m; sourceTree = "<group>"; };
 		28DF38966B2AC7CDD2CDE178 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6F3AC8DEC6374931F6E96970 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C848FFB8048C0B63C47EF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				0FAC7D2A1AC6CF5400DC18B3 /* SYNavigationControllerDelegate.m */,
 				0F8B254B1AC720110045F43A /* SYTransition.h */,
 				0F8B254C1AC720110045F43A /* SYTransition.m */,
+				0FCE4BF61AC93609005D6E32 /* SYRecipeDetailLogicController.h */,
+				0FCE4BF71AC93609005D6E32 /* SYRecipeDetailLogicController.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 			files = (
 				0F8B25511AC724090045F43A /* SYNetworkManager.m in Sources */,
 				0F9292C31AC84F450034AD9E /* SYTextFieldCell.m in Sources */,
+				0FCE4BF81AC93609005D6E32 /* SYRecipeDetailLogicController.m in Sources */,
 				0F8B254D1AC720110045F43A /* SYTransition.m in Sources */,
 				0F8B25701AC7456A0045F43A /* SYRecipe.m in Sources */,
 				0FAC7D221AC6CC0800DC18B3 /* SYBaseViewController.m in Sources */,
@@ -491,6 +498,7 @@
 				0F8B25831AC78EA20045F43A /* UIView+SYCategory.m in Sources */,
 				0F9292C41AC84F450034AD9E /* SYTextFieldCell.m in Sources */,
 				0F8B25681AC7363D0045F43A /* RPSlidingMenuViewController.m in Sources */,
+				0FCE4BF91AC93609005D6E32 /* SYRecipeDetailLogicController.m in Sources */,
 				0F8B25751AC75BD10045F43A /* SYAddRecipeViewController.m in Sources */,
 				0F8B25641AC7363D0045F43A /* RPSlidingMenuCell.m in Sources */,
 			);

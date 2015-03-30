@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 static const NSUInteger kObligatoryFieldCount = 2;
-static const NSUInteger kTotalFieldCount = 5;
+static const NSUInteger kTotalFieldCount = 4;
 
 @interface SYRecipe : NSObject
 @property (nonatomic, strong) NSNumber *recipe_id;
@@ -24,4 +24,6 @@ static const NSUInteger kTotalFieldCount = 5;
 @property (nonatomic, strong) NSString *thumbnail_url;
 
 + (instancetype)recipeWithDictionary:(NSDictionary *)dictionary;
+- (BOOL)isDifferentFrom:(SYRecipe *)aRecipe;
+- (NSDictionary *)serialize;
 @end

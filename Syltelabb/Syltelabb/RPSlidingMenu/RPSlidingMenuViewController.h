@@ -75,6 +75,6 @@
  */
 - (void)slidingMenu:(RPSlidingMenuViewController *)slidingMenu didSelectItemAtRow:(NSInteger)row;
 
-- (void)reloadCollectionView;
+- (void)reloadCollectionViewScrollToTop:(BOOL)scrollToTop;
 
 @end

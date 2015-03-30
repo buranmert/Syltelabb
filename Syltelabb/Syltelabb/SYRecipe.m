@@ -40,4 +40,43 @@
     return recipe;
 }
 
+- (BOOL)isDifferentFrom:(SYRecipe *)aRecipe {
+    if (![self.name isEqualToString:aRecipe.name]) {
+        return YES;
+    }
+    else if (![self.description isEqualToString:aRecipe.description]) {
+        return YES;
+    }
+    else if (![self.instructions isEqualToString:aRecipe.instructions]) {
+        return YES;
+    }
+    else if (self.favorite.boolValue != aRecipe.favorite.boolValue) {
+        return YES;
+    }
+    else if (self.difficulty.integerValue != aRecipe.difficulty.integerValue) {
+        return YES;
+    }
+    return NO;
+}
+
+- (NSDictionary *)serialize {
+    NSMutableDictionary *temp = [NSMutableDictionary dictionary];
+    if (self.name != nil) {
+        [temp setObject:self.name forKey:@"name"];
+    }
+    if (self.recipe_description != nil) {
+        [temp setObject:self.recipe_description forKey:@"description"];
+    }
+    if (self.instructions != nil) {
+        [temp setObject:self.instructions forKey:@"instructions"];
+    }
+    if (self.difficulty != nil) {
+        [temp setObject:self.difficulty forKey:@"difficulty"];
+    }
+    if (self.favorite != nil) {
+        [temp setObject:self.favorite forKey:@"favorite"];
+    }
+    return [NSDictionary dictionaryWithObject:temp forKey:@"recipe"];
+}
+
 @end
