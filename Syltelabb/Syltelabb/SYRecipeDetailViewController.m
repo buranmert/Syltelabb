@@ -77,7 +77,8 @@
                                        __strong typeof(weakSelf) strongSelf = weakSelf;
                                        strongSelf.imageView.image = image;
                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                           [strongSelf.tableView setContentInset:UIEdgeInsetsMake(image.size.height, 0.f, 0.f, 0.f)];
+                                           [strongSelf.tableView setContentInset:UIEdgeInsetsMake(CGRectGetHeight(strongSelf.imageView.bounds), 0.f, 0.f, 0.f)];
+                                           [strongSelf.tableView setContentOffset:CGPointMake(0.f, -CGRectGetHeight(strongSelf.imageView.bounds)) animated:NO];
                                            strongSelf.backgroundBlurView.alpha = 0.f;
                                        });
                                    }
